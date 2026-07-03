@@ -14,8 +14,8 @@ async function generateInterViewReportController(req, res) {
     let resumeText = ""
 
     if (req.file && req.file.buffer) {
-      const resumeContent = await (new pdfParse.PDFParse(Uint8Array.from(req.file.buffer))).getText()
-      resumeText = resumeContent.text
+      const data = await pdfParse(req.file.buffer)
+      resumeText = data.text || ""
     }
 
     if (!resumeText && !selfDescription?.trim()) {
@@ -101,8 +101,8 @@ async function uploadResumeOptimizeController(req, res) {
     }
 
     if (req.file && req.file.buffer) {
-      const resumeContent = await (new pdfParse.PDFParse(Uint8Array.from(req.file.buffer))).getText()
-      interviewReport.resume = resumeContent.text
+      const data = await pdfParse(req.file.buffer)
+      interviewReport.resume = data.text || ""
       await interviewReport.save()
     }
 
