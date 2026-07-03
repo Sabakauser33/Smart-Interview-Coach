@@ -4,7 +4,25 @@ const cookieParser = require("cookie-parser")
 const app = express()
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://smart-interview-coach-pilj.vercel.app');
+  const allowedFromEnv = process.env.ALLOWED_ORIGINS; // comma separated list
+  const requestOrigin = req.headers.origin;
+
+  let allowed = [];
+  if (allowedFromEnv) {
+    allowed = allowedFromEnv.split(",").map(o => o.trim());
+  } else {
+    // sensible defaults for production and local development
+    allowed = [
+      'https://smart-interview-coach-pilj.vercel.app',
+      'http://localhost:5173',
+      'http://127.0.0.1:5173'
+    ];
+  }
+
+  if (requestOrigin && allowed.includes(requestOrigin)) {
+    res.header('Access-Control-Allow-Origin', requestOrigin);
+  }
+
   res.header('Access-Control-Allow-Credentials', 'true');
   res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization,Cookie');
