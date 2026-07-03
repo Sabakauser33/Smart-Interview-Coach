@@ -195,29 +195,30 @@ const Interview = () => {
               </button>
             ))}
           </div>
-          
-          <button
-            onClick={async () => {
-              try {
-                setPdfLoading(true);
-                const blob = await getResumePdf(interviewId);
-                const url = window.URL.createObjectURL(new Blob([blob], { type: "application/pdf" }));
-                const link = document.createElement("a");
-                link.href = url;
-                link.setAttribute("download", `resume_${interviewId}.pdf`);
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                window.URL.revokeObjectURL(url);
-              } catch {
-                alert("Failed to download resume. Please try again.");
-              } finally {
-                setPdfLoading(false);
-              }
-            }}
-            disabled={pdfLoading}
-            className="button primary-button"
-          >
+
+          <div className="nav-actions">
+            <button
+              onClick={async () => {
+                try {
+                  setPdfLoading(true);
+                  const blob = await getResumePdf(interviewId);
+                  const url = window.URL.createObjectURL(new Blob([blob], { type: "application/pdf" }));
+                  const link = document.createElement("a");
+                  link.href = url;
+                  link.setAttribute("download", `resume_${interviewId}.pdf`);
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                  window.URL.revokeObjectURL(url);
+                } catch {
+                  alert("Failed to download resume. Please try again.");
+                } finally {
+                  setPdfLoading(false);
+                }
+              }}
+              disabled={pdfLoading}
+              className="button primary-button"
+            >
             <svg
               height={"0.8rem"}
               style={{ marginRight: "0.8rem" }}
@@ -255,6 +256,7 @@ const Interview = () => {
             </svg>
             Logout
           </button>
+        </div>
         </nav>
 
         <div className="interview-divider" />
