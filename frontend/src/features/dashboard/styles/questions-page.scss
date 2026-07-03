@@ -71,3 +71,94 @@
 .empty-state { background: rgba($bg-panel,0.9); color: $text-muted; padding: 40px; border-radius: 12px; }
 
 .btn { padding: 8px 12px; border-radius: 8px; }
+
+// ── Mobile Responsive Styles ──────────────────────────────────────────────────
+@media (max-width: 768px) {
+  .filter-buttons {
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .filter-btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .questions-list {
+    gap: 10px;
+  }
+
+  .question-header {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .question-text p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .btn-back {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .filter-buttons {
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  .filter-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+    min-height: 32px;
+  }
+
+  .question-card {
+    border-radius: 10px;
+  }
+
+  .question-header {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .question-number {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
+
+  .question-text p {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .content-section {
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+  }
+
+  .content-section h4 {
+    font-size: 13px;
+    margin: 0 0 6px 0;
+  }
+
+  .content-section p {
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .empty-state {
+    padding: 24px 16px;
+  }
+
+  .btn {
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}

@@ -206,3 +206,100 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: $text-primary;
 }
+
+// ── Mobile Responsive Styles ──────────────────────────────────────────────────
+@media (max-width: 768px) {
+  .plan-intro {
+    margin-bottom: 20px;
+
+    h2 {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .gaps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .gap-item {
+    min-height: 100px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .plan-intro {
+    margin-bottom: 16px;
+
+    h2 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .plan-content {
+    gap: 16px;
+  }
+
+  .plan-card {
+    padding: 16px;
+
+    h3 {
+      font-size: 16px;
+    }
+  }
+
+  .plan-steps {
+    gap: 12px;
+  }
+
+  .step-item {
+    padding: 12px;
+
+    h4 {
+      font-size: 14px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .gaps-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .gap-item {
+    min-height: unset;
+    padding: 12px;
+
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .gap-item .gap-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .action-footer {
+    padding: 16px;
+  }
+
+  .btn {
+    min-height: 44px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}

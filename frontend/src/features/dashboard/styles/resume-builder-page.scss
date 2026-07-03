@@ -180,3 +180,96 @@
   border-radius: 16px;
   text-align: center;
 }
+
+// ── Mobile Responsive Styles ──────────────────────────────────────────────────
+@media (max-width: 768px) {
+  .action-card {
+    padding: 18px;
+    gap: 10px;
+  }
+
+  .action-card h3 {
+    font-size: 16px;
+  }
+
+  .action-card p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 640px) {
+  .resume-content {
+    gap: 20px;
+  }
+
+  .actions-section {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .action-card {
+    padding: 16px 14px;
+
+    .action-icon {
+      font-size: 32px;
+    }
+
+    h3 {
+      font-size: 15px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .resume-preview {
+    padding: 16px;
+  }
+
+  .resume-preview h2 {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .resume-text {
+    padding: 14px;
+    font-size: 13px;
+    max-height: 240px;
+    border-left-width: 3px;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .tip-card {
+    padding: 16px;
+  }
+
+  .tip-number {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .tip-card h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .tip-card p {
+    font-size: 12px;
+  }
+
+  .btn {
+    min-height: 44px;
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
+  .empty-state {
+    padding: 24px 16px;
+  }
+}

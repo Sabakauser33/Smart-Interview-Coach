@@ -266,11 +266,66 @@
 }
 
 @media (max-width: 640px) {
+  .mock-interview-page,
+  .mock-interview-active {
+    padding: 0 12px 24px;
+  }
+
   .interview-stats {
     grid-template-columns: 1fr;
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .stat-value {
+    font-size: 1rem;
+  }
+
+  .intro-card h2 {
+    font-size: 20px;
+  }
+
+  .intro-card p {
+    font-size: 0.9rem;
   }
 
   .tip-item {
     grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 18px;
+  }
+
+  .tip-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .question-display h3 {
+    font-size: 1.2rem;
+  }
+
+  .answer-input {
+    min-height: 120px;
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .interview-controls {
+    gap: 12px;
+    flex-direction: column;
+
+    .btn {
+      min-width: unset;
+      width: 100%;
+      min-height: 44px;
+    }
+  }
+
+  .model-answer {
+    padding: 16px;
+  }
+
+  .progress-info h2 {
+    font-size: 18px;
   }
 }

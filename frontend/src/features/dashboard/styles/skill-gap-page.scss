@@ -214,3 +214,90 @@
     &:hover { transform: translateY(-1px); }
   }
 }
+
+// ── Mobile Responsive Styles ──────────────────────────────────────────────────
+@media (max-width: 768px) {
+  .gaps-summary {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .summary-card {
+    padding: 16px;
+  }
+
+  .summary-card .summary-icon {
+    font-size: 32px;
+  }
+
+  .summary-card h3 {
+    font-size: 14px;
+  }
+
+  .summary-card .summary-value {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .gaps-content {
+    gap: 20px;
+  }
+
+  .gaps-summary {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .summary-card {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    padding: 14px;
+
+    .summary-icon {
+      font-size: 28px;
+      min-width: 28px;
+    }
+
+    h3 {
+      font-size: 13px;
+    }
+
+    .summary-value {
+      font-size: 24px;
+    }
+  }
+
+  .gap-item {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .tip-card {
+    padding: 14px;
+
+    .tip-icon {
+      font-size: 28px;
+    }
+
+    h4 {
+      font-size: 14px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .btn {
+    min-height: 44px;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .btn--sm {
+    padding: 8px 10px;
+    font-size: 11px;
+  }
+}

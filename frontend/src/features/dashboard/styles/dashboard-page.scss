@@ -369,3 +369,91 @@
   margin: 12px 0 0;
 }
 
+// ── Mobile Responsive Styles ──────────────────────────────────────────────────
+@media (max-width: 640px) {
+  .report-card {
+    gap: 12px;
+  }
+
+  .report-stats {
+    grid-template-columns: 1fr;
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .stat-value {
+    font-size: 18px;
+  }
+
+  .empty-state {
+    padding: 40px 20px;
+
+    &__icon {
+      width: 80px;
+      height: 80px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 13px;
+    min-height: 44px;
+
+    &--lg {
+      padding: 12px 20px;
+      font-size: 14px;
+    }
+  }
+
+  .salary-calculator-card {
+    padding: 20px 16px;
+    gap: 16px;
+  }
+
+  .salary-calculator-card h2 {
+    font-size: 18px;
+  }
+
+  .salary-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .salary-form-grid input,
+  .salary-form-grid select {
+    padding: 12px 14px;
+    font-size: 16px;
+    min-height: 44px;
+  }
+
+  .salary-value {
+    font-size: 24px;
+  }
+
+  .salary-result {
+    padding: 16px;
+  }
+
+  .salary-result--compact {
+    padding: 14px;
+    margin-top: 12px;
+  }
+
+  .quick-actions {
+    gap: 12px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+
+    h2 {
+      font-size: 18px;
+    }
+  }
+}
+
