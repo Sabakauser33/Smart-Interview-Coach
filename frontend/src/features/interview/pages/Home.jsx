@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../style/home.scss";
 import { useInterview } from "../hooks/useInterviewForm.js";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const { generateReport, reports, clearReport, getReports } = useInterview(); // ← remove loading

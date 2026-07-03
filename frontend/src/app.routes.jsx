@@ -1,6 +1,7 @@
-import {createHashRouter} from "react-router";
+import { createHashRouter } from "react-router-dom";
 import Login from "./features/auth/pages/Login";
 import Register from "./features/auth/pages/Register";
+import LandingPage from "./pages/LandingPage";
 import Protected from "./features/auth/components/Protected";
 import Home from "./features/interview/pages/Home";
 import Interview from "./features/interview/pages/interview";
@@ -29,9 +30,12 @@ export const router = createHashRouter([
     },
     
     {
-    path: "/",
-    element: <Protected><Home /></Protected>    
-     
+        path: "/",
+        element: <LandingPage />
+    },
+    {
+        path: "/home",
+        element: <Protected><Home /></Protected>
     },
 
     {

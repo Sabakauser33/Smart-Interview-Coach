@@ -11,7 +11,7 @@ const Login = () => {
   const [error, setError] = useState("")
 
   useEffect(() => {
-    if (user) navigate('/')
+    if (user) navigate('/home')
   }, [user, navigate])
 
   const handleSubmit = async (e) => {
@@ -19,7 +19,7 @@ const Login = () => {
     setError("")
     const success = await handleLogin({ email, password })
     if (success) {
-      navigate('/')
+      navigate('/home')
     } else {
       setError("Invalid email or password. Please try again.")
     }

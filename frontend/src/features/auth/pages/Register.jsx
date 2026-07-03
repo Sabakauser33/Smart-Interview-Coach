@@ -16,7 +16,7 @@ const Register = () => {
     setError("")
     const success = await handleRegister({ username, email, password })
     if (success) {
-      navigate("/")
+      navigate("/home")
     } else {
       setError("Unable to create account. Please check your details and try again.")
     }

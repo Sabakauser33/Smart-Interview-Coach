@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import DashboardLayout from "../layouts/DashboardLayout";
 import { useInterview } from "../../interview/hooks/useInterviewForm";
-import { useSearchParams, useNavigate } from "react-router";
+import { useSearchParams, useNavigate } from "react-router-dom";
 import "../styles/questions-page.scss";
 
 const QuestionsPage = () => {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import DashboardLayout from "../layouts/DashboardLayout";
 import { useInterview } from "../../interview/hooks/useInterviewForm";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import "../styles/dashboard-page.scss";
 
 const Dashboard = () => {
@@ -18,7 +18,7 @@ const Dashboard = () => {
   }, [getReports]);
 
   const handleStartNewInterview = () => {
-    navigate("/");
+    navigate("/home")
   };
 
   const handleViewReport = (reportId) => {
